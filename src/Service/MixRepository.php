@@ -33,6 +33,8 @@ class MixRepository
 //        $output = new BufferedOutput();
 //        $this->twigDebugCommand->run(new ArrayInput([]), $output);
 //        dd($output);
+//        dd($this->githubContentClient);
+
 
         return $this->cache->get('mixed_data', function (CacheItemInterface $cacheItem) {
             $cacheItem->expiresAfter($this->isDebug ? 5 : 60);
